@@ -1,0 +1,126 @@
+/* ---- universal properties ---- */
+html, body, form, img {
+  margin: 0;
+  padding: 0;
+  border: 0; }
+
+html {
+  font-size: 100%; }
+
+body {
+  font: .75em/1.4 verdana,arial,sans-serif;
+  color: #000;
+  background: black url(space.jpg) no-repeat top center; }
+
+p, ul, li, h1, h2, h3 {
+  margin: 0 10px 1em;
+  padding: 0; }
+
+abbr, acronym {
+  cursor: help; }
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0; }
+
+.clearfix {
+  display: inline-block; }
+
+/* start commented backslash hack \*/
+* html .clearfix {
+  height: 1%; }
+
+.clearfix {
+  display: block; }
+
+/* close commented backslash hack */
+/* ---- lists ---- */
+ul {
+  margin-left: 35px; }
+
+li {
+  margin-bottom: 5px; }
+
+ul li ul {
+  margin-top: 10px; }
+
+/* ---- headings ---- */
+h1 {
+  font-size: 1.5em; }
+
+h2 {
+  font-size: 1.3em; }
+
+h3 {
+  font-size: 1.2em; }
+
+/* ---- container ---- */
+#container {
+  margin: 100px auto;
+  width: 500px;
+  height: 500px;
+  background: #000;
+  background: rgba(10, 10, 10, 0.9);
+  position: relative;
+  box-shadow: 0 0 30px rgba(255, 166, 0, 0.5); }
+
+select {
+  width: 220px;
+  height: 30px;
+  vertical-align: middle;
+  font-size: 14px;
+  padding: auto 0;
+  position: absolute;
+  left: 49px;
+  top: 27px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: #e7e7e7;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#e7e7e7), to(white));
+  background-image: -webkit-linear-gradient(top, #e7e7e7, white);
+  background-image: -moz-linear-gradient(top, #e7e7e7, white);
+  background-image: -ms-linear-gradient(top, #e7e7e7, white);
+  background-image: -o-linear-gradient(top, #e7e7e7, white);
+  outline: 0; }
+
+.box {
+  width: 113px;
+  height: 109px;
+  position: absolute;
+  border-radius: 20px;
+  border: 3px solid yellow;
+  /* will default to yellow for IE8 and older */ }
+
+/* show correct border colors for >IE8 and modern browsers */
+.box:nth-child(2) {
+  border-color: #ff5817; }
+
+.box:nth-child(3) {
+  border-color: #86c351; }
+
+.box:nth-child(4) {
+  border-color: #0a7bff; }
+
+#box1 {
+  left: 49px;
+  top: 73px;
+  background-color: #ff5817; }
+
+#box2 {
+  left: 185px;
+  top: 73px;
+  background-color: #86c351; }
+
+#box3 {
+  left: 322px;
+  top: 73px;
+  background-color: #0a7bff; }
+
+#targetbox {
+  left: 186px;
+  top: 289px;
+  border: 3px dotted #fff; }

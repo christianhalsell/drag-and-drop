@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Christian Halsell - GrindMedia</title>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/themes/smoothness/jquery-ui.css">
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+
+<link rel="stylesheet" href="styles.css" type="text/css" media="all">
+</head>
+
+<body>
+<div id="container">	
+      <select id="snapSelector">
+        <option value="1" selected="selected">Choose snap range...</option>
+        <option value="1">1</option>
+        <option value="5">5</option>
+        <option value="10">10</option>
+        <option value="20">20</option>
+        <option value="50">50</option>
+      </select>
+  
+  <div id="box1" class="box draggable"></div>
+  <div id="box2" class="box"></div>
+  <div id="box3" class="box"></div>
+  <div id="targetbox" class="box target"></div>
+</div><!-- /container -->
+
+
+<script>
+  $(function() {
+    var snapArea = 1;
+    $('#snapSelector').on('change', function() {
+      snapArea = this.value;
+      $("#box1").draggable({snap:".target", grid: [snapArea, snapArea]});
+      $("#box2").draggable({snap:".target", grid: [snapArea, snapArea]});
+      $("#box3").draggable({snap:".target", grid: [snapArea, snapArea]});
+    });
+
+    $("#box1").draggable({snap:".target"});
+  	$("#box2").draggable({snap:".target"});
+  	$("#box3").draggable({snap:".target"});
+  });
+  </script>
+</body>
+</html>
